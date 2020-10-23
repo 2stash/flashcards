@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
+      integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Flashcards</title>
+  </head>
+  <body>
+    <div class="container">
+      <h2>Flashcards</h2>
+
+      <div class="top-nav">
+        <button id="show" class="btn">
+          <i class="fas fa-plus"></i> Add New Card
+        </button>
+        <button id="edit" class="btn">
+          <i class="fas fa-edit"></i> Edit Card
+        </button>
+        <button id="delete" class="delete btn">
+          <i class="fas fa-trash"></i> Delete Cards
+        </button>
+        <button id="clear" class="clear btn">
+          <i class="fas fa-bomb"></i> Clear Cards
+        </button>
+      </div>
+
+      <!-- cards container -Cards are added here via JS Start -->
+      <div id="cards-container" class="cards"></div>
+      <!-- cards container end-------------------------------- -->
+
+      <!-- Bottom nav start-------------------------------- -->
+      <div class="bottom-nav">
+        <button id="prev" class="nav-button">
+          <i class="fas fa-arrow-left"></i>
+        </button>
+        <p id="current"></p>
+        <button id="next" class="nav-button">
+          <i class="fas fa-arrow-right"></i>
+        </button>
+      </div>
+      <!-- Bottom nav end-------------------------------- -->
+
+      <!-- add card form start------------------- -->
+      <div id="add-container" class="add-container">
+        <h2>Add New Card</h2>
+
+        <div class="form-group">
+          <label for="question">Question</label>
+          <textarea id="question" placeholder="Enter Question..."></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="answer">Answer</label>
+          <textarea id="answer" placeholder="Enter Answer..."></textarea>
+        </div>
+
+        <div id="add-button">
+          <button id="add-card" class="btn">
+            <i class="fas fa-plus"></i> <span id="add-span"></span>
+          </button>
+
+          <button id="hide" class="btn">
+            <i class="fas fa-times"></i> Go Back
+          </button>
+        </div>
+      </div>
+      <!-- add card form end------------------- -->
+    </div>
+    <!-- body container div end -->
+
+    <script src="./script.js"></script>
+  </body>
+</html>
